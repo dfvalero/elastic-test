@@ -1,7 +1,19 @@
 .root {
-
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--blue-main);
+  border-radius: 4px;
 }
 
 .input {
   border: none;
+  padding: 4px 8px;
+  color: var(--blue-dark);
+  outline: none;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--blue-main);
 }

@@ -1,0 +1,11 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background: var(--white);
+}
+
+.title {
+  margin: 0;
+  font-size: 32px;
+}

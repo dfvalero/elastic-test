@@ -6,9 +6,9 @@ export interface SearchProps extends ComponentPropsWithoutRef<'input'> {}
 
 const Search = (props: SearchProps) => {
     return (
-        <div>
+        <div className={classes.root}>
             <input placeholder="search..." className={classes.input} {...props} />
-            <SearchIcon />
+            <SearchIcon className={classes.icon} />
         </div>
     );
 };

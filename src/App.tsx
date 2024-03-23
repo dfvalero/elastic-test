@@ -6,6 +6,7 @@ import Box from './components/Box/Box.tsx';
 import Card from './components/Card/Card.tsx';
 import Alert from './components/Alert/Alert.tsx';
 import { Col, Row } from './components/Grid';
+import Header from './components/Header/Header.tsx';
 
 const App = () => {
     const { data, status } = useApi({ queryFn: () => getData() });
@@ -32,13 +33,12 @@ const App = () => {
 
     return (
         <main>
-            <Box display="flex">
-                <h1>Contact List</h1>
+            <Header title="Contact List">
                 <Search
                     value={searchQuery}
                     onChange={(event) => setSearchQuery(event.target.value)}
                 />
-            </Box>
+            </Header>
             <Box p={2}>
                 <Row>
                     {filtered.map((item) => (
