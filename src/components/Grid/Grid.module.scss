@@ -3,15 +3,13 @@
   gap: 8px;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
 }
 
 .column {
   display: flex;
   flex-direction: column;
-  flex: 100%;
-
-  @media (min-width:320px) { flex: 40% }
-  @media (min-width:480px) { flex: 20% }
-  @media (min-width:801px) { flex: 15% }
+  max-width: 200px;
+  flex: 1 0 200px;
 }
