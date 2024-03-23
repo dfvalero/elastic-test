@@ -13,6 +13,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  --blue-dark: rgb(1, 67, 97);
+  --blue-main: rgb(2, 136, 209);
+  --blue-light: rgb(229, 246, 253);
+  --red-light: rgb(253, 237, 237);
+  --red-main: rgb(211, 47, 47);
+  --red-dark: rgb(95, 33, 32);
+}
+
 a {
   font-weight: 500;
   color: #646cff;

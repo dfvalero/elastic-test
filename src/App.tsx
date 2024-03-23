@@ -4,14 +4,26 @@ import Search from './components/Search/Search.tsx';
 import Box from './components/Box/Box.tsx';
 import Card from './components/Card/Card.tsx';
 import { useState } from 'react';
+import Alert from './components/Alert/Alert.tsx';
 
 const App = () => {
     const { data, status } = useApi({ queryFn: () => getData() });
     const [searchQuery, setSearchQuery] = useState('');
 
-    if (status === 'idle' || status === 'loading' || status === 'error') {
-        return <div>block</div>;
+    if (status === 'idle' || status === 'loading') {
+        return (
+            <Box p={2}>
+                <Alert severity="info">Loading</Alert>
+            </Box>
+        );
     }
+
+    if (status === 'error')
+        return (
+            <Box p={2}>
+                <Alert severity="error">Data not found</Alert>
+            </Box>
+        );
 
     const filtered = data.filter((item) =>
         item.name.toLowerCase().includes(searchQuery.toLowerCase()),

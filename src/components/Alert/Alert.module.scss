@@ -1,0 +1,29 @@
+.root {
+  --alert-bg-color: black;
+  --alert-icon-color: black;
+  --alert-message-color: black;
+  border-radius: 4px;
+  background: var(--alert-bg-color);
+
+
+  &.info {
+    --alert-bg-color: var(--blue-light);
+    --alert-icon-color: var(--blue-main);
+    --alert-message-color: var(--blue-dark);
+  }
+  &.error {
+    --alert-bg-color: var(--red-light);
+    --alert-icon-color: var(--red-main);
+    --alert-message-color: var(--red-dark);
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--alert-icon-color);
+}
+
+.message {
+  color: var(--alert-message-color);
+}
