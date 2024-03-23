@@ -1,9 +1,14 @@
 .root {
+  position: relative;
   border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  background: var(--white);
   box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+  word-break: break-all;
 
   &:hover .extra {
-    display: block;
+    opacity: 1;
   }
 }
 
@@ -15,6 +20,8 @@
 .image {
   display: block;
   width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
 }
 
 .icon {
@@ -27,5 +34,19 @@
 }
 
 .extra {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: calc(100% - 16px);
+  padding: 8px;
+  font-size: 12px;
+  background: var(--grey);
+  transition: opacity 300ms;
+}
+
+.placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--red-light);
 }
