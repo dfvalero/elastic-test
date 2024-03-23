@@ -38,11 +38,29 @@ const App = () => {
                     onChange={(event) => setSearchQuery(event.target.value)}
                 />
             </Box>
-            <section>
+            <Box display="flex" gap={1}>
                 {filtered.map((item) => (
-                    <Card key={item.id} {...item} />
+                    <Card
+                        key={item.id}
+                        name={item.name}
+                        image={item.profile_image}
+                        icon={item.icon}
+                        extra={() => (
+                            <Box>
+                                <Box>{item.phone}</Box>
+                                <Box>{item.email}</Box>
+                            </Box>
+                        )}
+                    >
+                        <Box>
+                            <strong>{item.name}</strong>
+                        </Box>
+                        <Box>
+                            {item.job} | {item.company_name}
+                        </Box>
+                    </Card>
                 ))}
-            </section>
+            </Box>
         </main>
     );
 };
